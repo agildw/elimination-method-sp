@@ -4,15 +4,15 @@ function gaussianElimination(input: string): number[] {
   const matrix = parseInput(input);
   const n = matrix.length;
 
-  // Convert to upper triangular form
+  // Mengonversi matriks menjadi bentuk segitiga atas
   for (let i = 0; i < n; i++) {
-    // Normalize the current row
+    // Normalisasi baris saat ini
     const factor = matrix[i][i];
     for (let k = i; k < n + 1; k++) {
       matrix[i][k] /= factor;
     }
 
-    // Eliminate below
+    // Mengeliminasi elemen di bawah baris saat ini
     for (let j = i + 1; j < n; j++) {
       const factor = matrix[j][i];
       for (let k = i; k < n + 1; k++) {
@@ -39,9 +39,10 @@ function backSubstitution(matrix: Matrix): number[] {
   return solution;
 }
 
+// fungsi untuk mengonversi input menjadi matriks
 function parseInput(input: string): Matrix {
+  // Memisahkan persamaan dalam input
   const equations = input.split(";");
-  console.log(equations);
   const matrix: Matrix = [];
 
   for (const equation of equations) {
@@ -51,7 +52,7 @@ function parseInput(input: string): Matrix {
       .map((term) => term.trim());
     const row: number[] = [];
 
-    let rhs = equation.split("=")[1].trim(); // Get the right-hand side of the equation
+    let rhs = equation.split("=")[1].trim(); // Mendapatkan bagian kanan persamaan
     if (!rhs) {
       throw new Error("Persamaan tidak valid");
     }
@@ -59,7 +60,6 @@ function parseInput(input: string): Matrix {
     for (let term of terms) {
       const match = term.match(/([-+]?[0-9]*)([a-z])/);
       if (!match) {
-        // throw new Error("Term not valid");
         throw new Error("Persamaan tidak valid");
       }
 
@@ -79,7 +79,6 @@ function parseInput(input: string): Matrix {
           break;
       }
 
-      //   let coefficient = match[1] === "" ? 1 : parseInt(match[1], 10);
       if (term.startsWith("-") && coefficient > 0) {
         coefficient *= -1;
       } else if (!term.startsWith("-") && coefficient === 1) {
@@ -89,7 +88,7 @@ function parseInput(input: string): Matrix {
       row.push(coefficient);
     }
 
-    row.push(parseInt(rhs, 10)); // Push the right-hand side as the last element
+    row.push(parseInt(rhs, 10)); // Menambahkan bagian kanan sebagai elemen terakhir
     matrix.push(row);
   }
 
