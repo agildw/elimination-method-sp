@@ -1,22 +1,28 @@
+import Image from "next/image";
+
 interface TeamMemberProps {
   name: string;
   title: string;
+  nim: string;
   image: string;
 }
 
-const TeamMember = ({ name, title, image }: TeamMemberProps) => {
+const TeamMember = ({ name, title, nim, image }: TeamMemberProps) => {
   return (
     <div className="w-full md:w-6/12 lg:w-4/12 mb-6 px-6 sm:px-6 lg:px-4">
       <div className="flex flex-col">
-        <img
+        <Image
+          alt="team member"
+          width={400}
+          height={400}
           className="rounded-2xl drop-shadow-md hover:drop-shadow-xl transition-all duration-200 delay-100"
           src={image}
         />
 
-        <div className="text-center mt-6">
-          <h1 className="text-gray-900 text-xl font-bold mb-1">{name}</h1>
-
-          <div className="text-gray-700 font-light mb-2">{title}</div>
+        <div className="text-center mt-6 space-y-1">
+          <h1 className="text-gray-900 text-xl font-bold">{name}</h1>
+          <div className="text-gray-700 font-light">{nim}</div>
+          <div className="text-gray-500 font-semibold">{title}</div>
         </div>
       </div>
     </div>
@@ -36,19 +42,22 @@ const SectionTwo = () => {
         <div className="flex flex-wrap">
           <TeamMember
             name="Agil Dwiki Yudistira"
-            title="Founder & Specialist"
-            image="https://images.unsplash.com/photo-1634926878768-2a5b3c42f139?fit=clamp&w=400&h=400&q=80"
+            title="Ketua Kelompok"
+            image="/profile_1.png"
+            nim="41522110068"
           />
           <TeamMember
-            name="Ridho"
-            title="Tired & M. Specialist"
-            image="https://images.unsplash.com/photo-1634896941598-b6b500a502a7?fit=clamp&w=400&h=400&q=80"
+            name="Alhamdi Rifai"
+            title="Anggota Kelompok"
+            image="/profile_2.png"
+            nim="41522110035"
           />
 
           <TeamMember
-            name="Alhamdi Rifai"
-            title="Team Memeber"
-            image="https://images.unsplash.com/photo-1634193295627-1cdddf751ebf?fit=clamp&w=400&h=400&q=80"
+            name="Ridho Pangestu"
+            title="Anggota Kelompok"
+            image="/profile_3.png"
+            nim="41522110041"
           />
         </div>
       </div>

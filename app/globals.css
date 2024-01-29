@@ -6,4 +6,5 @@ body {
   color: rgb(var(--foreground-rgb));
   background: #ffff;
   width: 100%;
+  overflow-x: hidden;
 }

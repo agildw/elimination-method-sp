@@ -53,13 +53,14 @@ function parseInput(input: string): Matrix {
 
     let rhs = equation.split("=")[1].trim(); // Get the right-hand side of the equation
     if (!rhs) {
-      throw new Error("Invalid equation format");
+      throw new Error("Persamaan tidak valid");
     }
 
     for (let term of terms) {
       const match = term.match(/([-+]?[0-9]*)([a-z])/);
       if (!match) {
-        throw new Error("Invalid term format");
+        // throw new Error("Term not valid");
+        throw new Error("Persamaan tidak valid");
       }
 
       let coefficient = 0;
@@ -92,9 +93,7 @@ function parseInput(input: string): Matrix {
     matrix.push(row);
   }
 
-  console.log(matrix);
   return matrix;
 }
 
-// export default gaussianElimination;
-console.log(gaussianElimination("x+2y-3z=1;2x-y+z=1;x+4y-2z=9"));
+export default gaussianElimination;

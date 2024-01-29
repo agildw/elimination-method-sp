@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { MutableRefObject } from "react";
 
 const SectionOne = () => {
   return (
@@ -15,10 +16,13 @@ const SectionOne = () => {
         // fill
         className="rounded-3xl w-full object-cover max-h-48 md:max-h-96"
       />
-      <p className="text-gray-400 font-semibold text-sm mt-4 text-center md:max-w-xs">
-        Metode Eliminasi menyelesaikan persamaan dengan cara menghilangkan salah
-        satu dari variabel yang ada
+      <p className="text-gray-400 font-base text-sm mt-4 text-center md:max-w-md">
+        Eliminasi Gauss adalah algoritma yang digunakan untuk menyelesaikan
+        sistem persamaan linear
       </p>
+      {/* <button className="bg-gray-800 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded-lg">
+        Kalkulator
+      </button> */}
     </div>
   );
 };
