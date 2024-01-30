@@ -11,7 +11,7 @@ const SectionThree = () => {
         className="object-cover h-96 w-full object-left-bottom lg:w-1/2 xl:h-[30rem] 2xl:h-[36rem] "
       />
       <div className="flex flex-col items-center justify-center space-y-8 px-8 2xl:px-56">
-        <h2 className="font-bold text-3xl">
+        <h2 className="font-bold text-4xl">
           Apa itu Gaussian Elimination Method With Back Substitution?
         </h2>
         <p className="text-gray-500 text-2xl font-medium">

@@ -28,7 +28,7 @@ const Section = ({
       />
 
       <div className="flex flex-col justify-center space-y-8 px-8">
-        <h2 className="font-bold text-3xl text-left">{title}</h2>
+        <h2 className="font-bold text-4xl text-left">{title}</h2>
         <p className="text-gray-500 text-2xl font-medium">{description}</p>
       </div>
     </div>
