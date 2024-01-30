@@ -24,7 +24,7 @@ const Section = ({
         width={1920}
         height={1080}
         alt="Algebra"
-        className="object-cover h-96 p-4 rounded-[2.3rem] w-full object-left-bottom  lg:p-6 lg:w-1/2 xl:h-[30rem]"
+        className="object-cover h-96 p-8 rounded-[3rem] w-full object-left-bottom  lg:p-6 lg:w-1/2 xl:h-[30rem]"
       />
 
       <div className="flex flex-col justify-center space-y-8 px-8">
@@ -39,7 +39,7 @@ const SectionFour = () => {
   return (
     // <div className="bg-gray-100 flex flex-col">
     // <div className="flex flex-col space-y-20 w-full max-w-6xl">
-    <div className="flex flex-col w-screen py-10 bg-gray-50">
+    <div className="flex flex-col w-screen ">
       <div className="max-w-6xl mx-auto space-y-20">
         <Section
           title="Tahap eliminasi maju"

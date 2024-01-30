@@ -1,9 +1,16 @@
+"use client";
 import Image from "next/image";
-import { MutableRefObject } from "react";
 
 const SectionOne = () => {
+  const handleClickScroll = () => {
+    window.scrollTo({
+      top: document.body.scrollHeight,
+      left: 0,
+      behavior: "smooth",
+    });
+  };
   return (
-    <div className="flex flex-col items-center justify-center space-y-8 p-8 max-w-screen lg:max-w-3xl xl:mt-20">
+    <div className="flex flex-col items-center justify-center space-y-8 p-8 max-w-screen lg:max-w-3xl mt-10">
       <h1 className="text-5xl font-extrabold">
         Gaussian Elimination Method With Back Substitution
       </h1>
@@ -20,9 +27,12 @@ const SectionOne = () => {
         Eliminasi Gauss adalah algoritma yang digunakan untuk menyelesaikan
         sistem persamaan linear
       </p>
-      {/* <button className="bg-gray-800 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded-lg">
+      <button
+        className="bg-gray-800 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded-lg"
+        onClick={handleClickScroll}
+      >
         Kalkulator
-      </button> */}
+      </button>
     </div>
   );
 };
