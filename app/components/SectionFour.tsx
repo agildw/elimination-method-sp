@@ -39,7 +39,7 @@ const SectionFour = () => {
   return (
     // <div className="bg-gray-100 flex flex-col">
     // <div className="flex flex-col space-y-20 w-full max-w-6xl">
-    <div className="flex flex-col w-screen ">
+    <div className="flex flex-col w-screen py-10 bg-gray-50">
       <div className="max-w-6xl mx-auto space-y-20">
         <Section
           title="Tahap eliminasi maju"
