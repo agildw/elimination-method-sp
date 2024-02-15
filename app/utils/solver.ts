@@ -59,7 +59,7 @@ function gaussianElimination(input: string): GaussianEliminationResult {
   };
 }
 
-function backSubstitution(matrix: Matrix): Solution[] {
+export function backSubstitution(matrix: Matrix): Solution[] {
   const n = matrix.length;
   const solution: Solution[] = new Array(n).fill(0);
 
@@ -87,7 +87,7 @@ function backSubstitution(matrix: Matrix): Solution[] {
 }
 
 // fungsi untuk mengonversi input menjadi matriks
-function parseInput(input: string): {
+export function parseInput(input: string): {
   matrix: Matrix;
   equations: string[];
 } {
